@@ -150,11 +150,29 @@ class resolverIP():
         
             
     def completarOctetos(self, var1, var2, var3, var4):
-        
-        while True:
+
+        finCiclo = True
+        while finCiclo:
             if len(var1) < 8:
-                 var1 = "0"+var1
+                var1 = "0"+var1
+            elif len(var2) < 8:
+                var2 = "0"+var2
+            elif len(var3) < 8:
+                var3 = "0"+var3
+            elif len(var4) < 8:
+                var4 = "0"+var4
+            elif len(var1) == 8:
+                if len(var2) == 8:
+                    if len(var3) == 8:
+                        if len(var4) == 8:
+                            finCiclo = False
         
+        print(var1)
+        print(var2)
+        print(var3)
+        print(var4)
+        system("pause")
+        self.menu()
         
     def menu(self):
         system('cls')
