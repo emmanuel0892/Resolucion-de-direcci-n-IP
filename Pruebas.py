@@ -143,6 +143,7 @@ class resolverIP():
         
         print(lista)
         system('pause')
+  
         
         compOct = self.completarOctetos(oct1,oct2,oct3,oct4)
         
