@@ -123,27 +123,7 @@ class resolverIP():
             oct2    = str(octeto2[2:10])
             oct3    = str(octeto3[2:10])
             oct4    = str(octeto4[2:10])
-            
-            if oct1 == "0":
-                oct1 = "00000000"
-            elif oct1 == "1":
-                oct1 = "00000001"
-                
-            if oct2 == "0":
-                oct2 = "00000000"
-            elif oct2 == "1":
-                oct2 = "00000001"
-            
-            if oct3 == "0":
-                oct3 = "00000000"
-            elif oct3 == "1":
-                oct3 = "00000001"
-                
-            if oct4 == "0":
-                oct4 = "00000000"
-            elif oct4 == "1":
-                oct4 = "00000001"
-                
+                          
             print(oct1)
             print(oct2)
             print(oct3)
@@ -164,8 +144,18 @@ class resolverIP():
         print(lista)
         system('pause')
         
+        compOct = self.completarOctetos(oct1,oct2,oct3,oct4)
+        
         self.menu()
+        
             
+    def completarOctetos(self, var1, var2, var3, var4):
+        
+        while True:
+            if len(var1) < 8:
+                 var1 = "0"+var1
+        
+        
     def menu(self):
         system('cls')
         opc = 0
