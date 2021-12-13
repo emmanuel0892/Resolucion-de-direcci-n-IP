@@ -192,8 +192,6 @@ class resolverIP():
         else:
             print()    
         
-        
-    
     def ejecucion(self):
         self.menu()
     
