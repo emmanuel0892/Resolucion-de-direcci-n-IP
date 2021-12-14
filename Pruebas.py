@@ -1,5 +1,6 @@
 from os import system
 import re
+from beautifultable import BeautifulTable
 
 class resolverIP():
     
@@ -131,23 +132,14 @@ class resolverIP():
             system('pause')
             octetos = (oct1+oct2+oct3+oct4)
             
-            lista = []
-            
         except:
             print("Error De conversion!!!")
             system('pause')
             system('cls')
         
-        for x in octetos:
-            lista.append(x)
-        
-        print(lista)
-        system('pause')
-        
         compOct = self.completarOctetos(oct1,oct2,oct3,oct4)
         
         self.menu()
-        
             
     def completarOctetos(self, var1, var2, var3, var4):
 
@@ -171,8 +163,29 @@ class resolverIP():
         print(var2)
         print(var3)
         print(var4)
+        
+        Octetos = var1+var2+var3+var4
+        
+        lista = []        
+        for x in Octetos:
+            lista.append(0[x])
+        
+        print(lista)
+        system('pause')
+        
+        listaOct = self.Listar(x)
+    
+    def Listar(self, lista):
+        
+        system("cls")
+        var = 0
+        table = BeautifulTable()
+        
+        for x in lista:
+            table.rows.append([(x[0])])
+        print(table)
         system("pause")
-        self.menu()
+        
         
     def menu(self):
         system('cls')
